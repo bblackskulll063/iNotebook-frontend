@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ficon i{
+    cursor: pointer;
+}
+
+.login-page, .signup-page{
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    padding: 30px 50px;
+    margin-top: 100px;
+    width: 50%;
+    background-color: rgb(234, 239, 231);
+    box-shadow: 7px 9px 10px rgb(179, 194, 169);
+}
+
+.notes-page{
+    border-top: 2px solid black;
+    padding-top: 20px;
+}
