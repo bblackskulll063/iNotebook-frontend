@@ -5,13 +5,13 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleLogout= () => {
+  const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login');
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top headerbar">
         <div className="container-fluid container">
           <a className="navbar-brand" href="/">
             iNoteBook
@@ -42,13 +42,13 @@ const Navbar = () => {
             </ul>
 
           </div>
-          {!localStorage.getItem('token')?
-          <div className="d-flex ">
-          <a href="/login" className="btn btn-primary active mx-2" aria-current="page">Login</a>
-          <a href="/signup" className="btn btn-primary active mx-2" aria-current="page">SignUp</a>
-        </div>:
-        <button className="btn btn-primary mx-2" onClick={handleLogout}>LogOut</button>}
-          
+          {!localStorage.getItem('token') ?
+            <div className="d-flex ">
+              <a href="/login" className="btn btn-primary active mx-2" aria-current="page">Login</a>
+              <a href="/signup" className="btn btn-primary active mx-2" aria-current="page">SignUp</a>
+            </div> :
+            <button className="btn btn-primary mx-2" onClick={handleLogout}>LogOut</button>}
+
         </div>
       </nav>
     </div>

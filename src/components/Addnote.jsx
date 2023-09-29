@@ -17,14 +17,14 @@ const Addnote = () => {
   };
 
   return (
-    <div className="container my-3 ">
-      <h1 className="text-center">Add your Notes</h1>
-      <div className="conatiner " style={{ width: "40%" }}>
+    <div className="container addnote-page">
+      {/* <h1 className="text-center">Add your Notes</h1> */}
+      <div className="conatiner ">
         <form>
           <div className="mb-3">
-            <label htmlFor="title" className="form-label">
+            {/* <label htmlFor="title" className="form-label">
               Title
-            </label>
+            </label> */}
             <input
               type="text"
               className="form-control"
@@ -32,12 +32,13 @@ const Addnote = () => {
               name="title"
               value={note.title}
               onChange={onChange}
+              placeholder=" Title"
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="description" className="form-label">
+            {/* <label htmlFor="description" className="form-label">
               Description
-            </label>
+            </label> */}
             <input
               type="text"
               className="form-control"
@@ -45,12 +46,13 @@ const Addnote = () => {
               name="description"
               value={note.description}
               onChange={onChange}
+              placeholder=" Description ..."
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="tag" className="form-label">
+            {/* <label htmlFor="tag" className="form-label">
               Tag
-            </label>
+            </label> */}
             <input
               type="text"
               className="form-control"
@@ -58,6 +60,7 @@ const Addnote = () => {
               name="tag"
               value={note.tag}
               onChange={onChange}
+              placeholder=" Tag"
             />
           </div>
           <button
