@@ -61,8 +61,8 @@ const Notes = () => {
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
-          <div className="modal-content">
+        <div className="modal-dialog " >
+          <div className="modal-content" style={{ borderRadius:"20px" }}>
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
                 Edit Note
@@ -137,7 +137,6 @@ const Notes = () => {
       </div>
       
       <div className="row">
-        <h1 className="text-center mt-3 notes-page">Your notes</h1>
         {notes.length?notes.map((note) => {
           return (
             <NoteItems key={note._id} updateNote={updateNote} note={note} />

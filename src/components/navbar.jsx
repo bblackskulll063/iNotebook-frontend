@@ -13,8 +13,8 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top headerbar">
         <div className="container-fluid container">
-          <a className="navbar-brand" href="/">
-            iNoteBook
+          <a className="navbar-brand nav-heading" href="/home">
+          <i class="fa-solid fa-book-journal-whills"></i> iNoteBook
           </a>
           <button
             className="navbar-toggler"
@@ -34,11 +34,11 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} href="/about">
                   About
                 </a>
-              </li>
+              </li> */}
             </ul>
 
           </div>
