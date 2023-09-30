@@ -1,5 +1,5 @@
-import React, { useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
@@ -19,12 +19,12 @@ const Login = () => {
         });
         const json = await response.json();
         console.log(json);
-        if(json.success){
+        if (json.success) {
             // settoken 
             localStorage.setItem('token', json.authtoken);
             navigate('/home')
         }
-        else{
+        else {
             alert("Invalid Credentials");
         }
     }
@@ -34,19 +34,27 @@ const Login = () => {
     };
 
     return (
-        <div className='container login-page'>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label forhtml="email" className="form-label">Email Address</label>
-                    <input type="email" className="form-control" value={credentials.email} id="email" name="email" aria-describedby="emailHelp" onChange={onChange} />
-                </div>
-                <div className="mb-3">
-                    <label forhtml="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" value={credentials.password} id="password" name='password' onChange={onChange} />
+        <div className="container login-page">
+            <div className="row">
+                <div className="col col-lg-6 col-sm-12 picture-section" >
+                    <img src="draw1.jpg" />
                 </div>
 
-                <button type="submit" className="btn btn-primary mt-3 ">Submit</button>
-            </form>
+                <div className="col col-lg-6 col-sm-12 detail-section" >
+                    <form onSubmit={handleSubmit}>
+                        <h1>Log In</h1>
+                        <div class="box">
+                            <input type="email" className="form-control" value={credentials.email} id="email" name="email" aria-describedby="emailHelp" onChange={onChange} placeholder="Email" />
+                        </div>
+                        <div class="box">
+                            
+                            <input type="password" className="form-control" value={credentials.password} id="password" name='password' onChange={onChange} placeholder="Password" />
+                        </div>
+
+                        <button className="btn btn-primary my-3" type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }
