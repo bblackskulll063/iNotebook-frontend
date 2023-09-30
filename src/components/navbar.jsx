@@ -34,11 +34,11 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} href="/about">
                   About
                 </a>
-              </li>
+              </li> */}
             </ul>
 
           </div>
